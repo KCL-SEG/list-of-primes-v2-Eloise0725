@@ -4,7 +4,7 @@
 def primes(number_of_primes):
     list = []
 
-    if number_of_primes <= 0:
+    if number_of_primes < 1:
         raise ValueError
     a = 2
     while number_of_primes != 0:

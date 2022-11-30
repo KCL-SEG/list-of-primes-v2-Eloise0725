@@ -6,18 +6,15 @@ def primes(number_of_primes):
 
     if number_of_primes <= 0:
         raise ValueError
-
-    b = 2
-    while len(list) < number_of_primes:
+    a = 2
+    while number_of_primes != 0:
         prime = True
-
-        for a in range(2,b):
-            if b % a == 0:
+        for i in range(2, a):
+            if a % i == 0:
                 prime = False
-
-    if b is prime:
-        list.append(b)
-        number_of_primes -= 1
-    b += 1
+        if prime:
+            list.append(a)
+            number_of_primes -= 1
+        a += 1
 
     return list

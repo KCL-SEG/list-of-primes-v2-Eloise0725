@@ -8,14 +8,16 @@ def primes(number_of_primes):
         raise ValueError
 
     b = 2
-    prime = True
     while len(list) < number_of_primes:
-            for a in range(2,b):
-                if b % a == 0:
-                    b = False
+        prime = True
+
+        for a in range(2,b):
+            if b % a == 0:
+                prime = False
 
     if b is prime:
         list.append(b)
-        b += 1
+        number_of_primes -= 1
+    b += 1
 
     return list
